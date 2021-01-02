@@ -16,7 +16,10 @@ const Library = () => {
       <td>{book.title}</td>
       <td>{book.author}</td>
       <td>{book.rating}</td>
-      <button className='delete' onClick={() => deleteBookHandler(book.id)}>
+      <button
+        className='delete'
+        onClick={() => deleteBookHandler({ id: book.id })}
+      >
         x
       </button>
     </tr>
