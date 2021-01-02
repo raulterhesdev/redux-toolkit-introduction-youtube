@@ -1,12 +1,16 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addBook } from '../actions/booksActions';
+import { addBook, deleteBook } from '../actions/booksActions';
 
 const initialState = { books: [] };
 
 const booksReducer = createReducer(initialState, (builder) => {
-  builder.addCase(addBook, (state, action) => {
-    state.books.push(action.payload);
-  });
+  builder
+    .addCase(addBook, (state, action) => {
+      state.books.push(action.payload);
+    })
+    .addCase(deleteBook, (state, action) => {
+      state.books.filter((book) => book.id !== action.payload.id);
+    });
 });
 
 export default booksReducer;
