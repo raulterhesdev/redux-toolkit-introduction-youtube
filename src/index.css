@@ -99,6 +99,7 @@ body {
   color: white;
   border: none;
   outline: none;
+  margin-top: 2px;
 }
 
 .delete:hover {
