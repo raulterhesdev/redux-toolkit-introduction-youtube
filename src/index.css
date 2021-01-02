@@ -93,3 +93,14 @@ body {
 .library table tr:nth-child(odd) {
   background-color: #ccc;
 }
+
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.delete:hover {
+  background-color: darkred;
+}
