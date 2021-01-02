@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { nanoid } from 'nanoid';
+import { addBook } from '../../store/actions/booksActions';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [rating, setRating] = useState('5');
 
-  const addBookHandler = () => {
-    //   will handle book submit here
+  const dispatch = useDispatch();
+
+  const addBookHandler = (e) => {
+    e.preventDefault();
+    dispatch(addBook({ title, author, rating, id: nanoid() }));
   };
 
   return (
