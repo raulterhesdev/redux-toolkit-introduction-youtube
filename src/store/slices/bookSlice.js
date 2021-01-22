@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { logout } from './authSlice';
 
 const initialState = {
   books: [],
@@ -28,9 +29,12 @@ const booksSlice = createSlice({
       state.books = state.books.filter((book) => book.id !== action.payload.id);
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(logout, (state, action) => {
+      state.books = [];
+    });
+  },
 });
-
-console.log(booksSlice);
 
 export const { addBook, deleteBook } = booksSlice.actions;
 

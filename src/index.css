@@ -13,11 +13,24 @@ body {
 .header {
   background-color: #283593;
   padding: 12px;
+  position: relative;
 }
 
 .header h1 {
   color: white;
   text-align: center;
+}
+
+.header .logout-btn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .add-book {
