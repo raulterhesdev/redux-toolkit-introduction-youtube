@@ -21,16 +21,25 @@ body {
   text-align: center;
 }
 
-.header .logout-btn {
+.header .logout-btn,
+.header .user-btn {
   position: absolute;
   top: 50%;
-  right: 16px;
+
   transform: translateY(-50%);
   background-color: transparent;
   color: white;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.header .logout-btn {
+  right: 16px;
+}
+
+.header .user-btn {
+  left: 16px;
 }
 
 .add-book {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { logout } from '../../store/slices/authSlice';
+import { fetchRandomUserData, logout } from '../../store/slices/authSlice';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,12 @@ const Header = () => {
       <h1>Personal Library</h1>
       <button onClick={() => dispatch(logout())} className='logout-btn'>
         Logout
+      </button>
+      <button
+        onClick={() => dispatch(fetchRandomUserData())}
+        className='user-btn'
+      >
+        Get User Data
       </button>
     </div>
   );
