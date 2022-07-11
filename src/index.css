@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #eee;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  background-color: #283593;
+  padding: 12px;
+  position: relative;
+}
+
+.header h1 {
+  color: white;
+  text-align: center;
+}
+
+.header .logout-btn,
+.header .user-btn {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.header .logout-btn {
+  right: 16px;
+}
+
+.header .user-btn {
+  left: 16px;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.add-book div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+}
+
+.add-book div label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-book div input {
+  font-size: 16px;
+  width: 200px;
+  padding: 12px;
+  margin-top: 4px;
+  outline: none;
+  border: 2px solid #001064;
+}
+
+.add-book div input:focus {
+  border: 2px solid #5f5fc4;
+}
+
+.add-book button {
+  background-color: #283593;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 32px;
+  margin-top: 16px;
+}
+
+.add-book button:hover {
+  background-color: #001064;
+}
+
+.library {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.library h2 {
+  padding: 8px;
+  background-color: #283593;
+  color: white;
+  text-align: center;
+}
+
+.library table tr th {
+  padding: 12px;
+}
+
+.library table tr td {
+  padding: 8px;
+}
+
+.library table tr:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.delete:hover {
+  background-color: darkred;
+}
